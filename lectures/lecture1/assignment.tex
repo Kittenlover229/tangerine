@@ -1,0 +1,129 @@
+\documentclass{article}
+\pagestyle{empty}
+
+\newcommand{\s}[1]{\texttt{#1}}
+\newcommand{\In}{\paragraph{Input:}}
+\newcommand{\Out}{\paragraph{Output:}}
+\newcommand{\Note}{\paragraph{Note:}}
+\newcommand{\Hint}{\paragraph{Hint:}}
+
+\begin{document}
+
+\section{Simple Stuff}
+Prerequisites: control flow (branching, iteration), IO, arithmetic, atomic types.
+
+\subsection{Equation of a Line $\star$}
+\In
+Two integers $k$ and $b$.
+\Out
+Such value $x$, that it satisfies the equation $kx+b=0$. 
+
+\subsection{Wait, what? $\star\star$}
+\In
+Two integers $a$ and $b$.
+\Out
+The product of $a$ and $b$.
+\Note
+You may not use the multiplication operation.
+
+\subsection{Late'o'clock $\star\star$}
+\In An integer $0 \leq h < 24$. Hours on a clock.
+\Note Convert the given time $h$ to the 12-hour clock format.
+\Out First the time $h$ in 12-hour clock format, then \s{"am"} or \s{"pm"}
+depending on the time.
+
+\subsection{Quadratic Equation $\star\star$}
+\In
+Three integers $a$, $b$ and $c$.
+\Out
+Find all values of $x$, such that $ax^2 + bx + c=0$. 
+\Note
+If there are no possible values of $x$ output \texttt{"NaN"} (not a number). 
+The values should not be repeated.
+
+\subsection{Qubic Equation $\star\star\star$}
+\In
+Four integers $a$, $b$, $c$ and $d$.
+\Out
+Find all values of $x$, such that $ax^3 + bx^2 + cx + d = 0$. 
+\Note
+If there are no possible values of $x$ output \texttt{"NaN"} (not a number). 
+The values should not be repeated.
+\Hint
+use Cardano's formula.
+
+\subsection{Minmaxed $\star$}
+\In
+Two integers, $a$ and $b$.
+\Out
+Two integers, first the largest of them two, next the smallest.
+
+\subsection{Sigma for Sum $\star\star$}
+\In
+An integer $a$ such that $1 \leq a \leq 10^{10^{10}}$.
+\Out
+The sum all the integers $1 + 2 + \dots + a$.
+\Hint
+Loop isn't the only way to go.
+
+\subsection{Factor!al $\star\star\star$}
+\In
+An integer $a$ such that $1 \leq b \leq 10^{5}$.
+\Out
+The product all the integers $1 \times 2 \times \cdots \times b$.
+\Hint
+Lookup the arguments for \s{range} in the official Python3.x documentation.
+
+\subsection{Minmaxed 2: The Sequel $\star\star\star$}
+\In
+Two integers, $a$ and $b$.
+\Out
+Two integers, first the largest of them two, next the smallest.
+\Note
+You may  only use \s{min()} or \s{max()}, not both. You may not use branching.
+
+\section{Turtle or Tortoise?}
+Prerequisites: \s{turtle} module, the entire previous section.
+
+\subsection{Fair Square $\star$}
+\In
+An integer $A$ such that $10 \leq A \leq 100$.
+\Out
+Using \s{from turtle import Turtle}'s methods like 
+\s{forward} and \s{right} draw a square of length $A$.
+
+\subsection{Fair Ngon $\star\star$}
+\In
+Two integers, $A$ such that $10 \leq A \leq 100$ and $N$
+such that $2 \leq N \leq 20$.
+\Out
+Using \s{Turtle} draw a regular polygon (an $N$-gon) with $N$ sides and side
+length $A$. Ensure that the turtle finishes in the same position as it started
+in. The turtle shouldn't draw over itself at any point.
+\Hint
+Loops are your friend.
+
+\subsection{Trigonometry BFF $\star\star\star$}
+\In
+Two integers, $a$ and $b$.
+\Out
+Using \s{Turtle} draw a graph of the function $y = a * sin(\frac{\pi x}{10}) + b$.
+From $0$ to $20$ and a graph of the function $y = b$. Print the final position
+of the turtle.
+\Hint
+You can get $\sin$ and $\pi$ with \s{from math import pi, sin}, they are accurate
+enough for this purpose.
+
+\subsection{The Fair Ngon $\star\star\star\star\star$}
+\In
+Two integers, $A$ such that $10 \leq A \leq 100$ and $N$
+such that $2 \leq N \leq 20$.
+\Out
+Using \s{Turtle} draw a regular polygon (an $N$-gon) with $N$ sides and side
+length $A$. Ensure that the turtle finishes in the same position as it started
+in. You are only allowed to control the turtle with \s{penup}, \s{pendown},
+\s{goto}.
+\Hint
+Trigonometry might help.
+
+\end{document}
