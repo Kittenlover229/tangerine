@@ -1,6 +1,7 @@
 \documentclass{article}
 \usepackage{MnSymbol}
 \usepackage{multido}
+\usepackage{xfp}
 
 \pagestyle{empty}
 
@@ -11,5 +12,9 @@
 \newcommand{\Hint}{\paragraph{Hint:}}
 
 \newenvironment{task}[2]
-    {\subsection{#1 \multido{\i=1+1}{#2}{$\smallstar$}}\begin{minipage}{\linewidth}}
+    {\subsection{#1 
+        \multido{\i=1+1}{#2}{$\filledstar$}
+        \multido{\i=1+1}{\fpeval{5-#2}}{$\smallstar$}
+        }
+        \begin{minipage}{\linewidth}}
     {\end{minipage}}
