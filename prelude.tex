@@ -1,5 +1,12 @@
+\documentclass{article}
+\pagestyle{empty}
+
 \newcommand{\s}[1]{\texttt{#1}}
 \newcommand{\In}{\paragraph{Input:}}
 \newcommand{\Out}{\paragraph{Output:}}
 \newcommand{\Note}{\paragraph{Note:}}
 \newcommand{\Hint}{\paragraph{Hint:}}
+
+\newenvironment{task}[1]
+    {\subsection{#1!!!}\begin{minipage}{\linewidth}}
+    {\end{minipage}}
