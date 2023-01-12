@@ -1,16 +1,8 @@
-\documentclass{article}
-\pagestyle{empty}
-
-\newcommand{\s}[1]{\texttt{#1}}
-\newcommand{\In}{\paragraph{Input:}}
-\newcommand{\Out}{\paragraph{Output:}}
-\newcommand{\Note}{\paragraph{Note:}}
-\newcommand{\Hint}{\paragraph{Hint:}}
-
-\begin{document}
-
-\section{Simple Stuff}
-Prerequisites: control flow (branching, iteration), IO, arithmetic, atomic types.
+\subsection{The Good Old Days $\star$}
+\In
+An integer $4$.
+\Out
+The word \s{"Elephant"}.
 
 \subsection{Equation of a Line $\star$}
 \In
@@ -52,11 +44,48 @@ The values should not be repeated.
 \Hint
 use Cardano's formula.
 
+\subsection{Euclid Approves $\star$}
+\In
+Two integers $a$ and $b$, sides of a right angled triangle.
+\Out
+The hypotenuse $c$ of the aforementioned triangle.
+
+\subsection{Euclid Disapproves $\star\star$}
+\In
+Two integers $a$ and $b$, sides of a right angled triangle and an angle $\theta$
+between them.
+\Out
+The third side of the triangle.
+\Hint
+You may use \s{import math} to get some functions you might want.
+
+\subsection{Everyone but Euclid Approves $\star\star\star$}
+\In
+An integer $n$ the amount of following lines, $3 \leq n \leq 100$. 
+Each following line $i$ contains a number $-100 \leq a_i \leq 100$, a 
+component of the vector $\hat{v} = \{a_1, a_2, \dots, a_n\}$.
+\Out
+The length of a vector $||\hat{v}||$.
+
 \subsection{Minmaxed $\star$}
 \In
 Two integers, $a$ and $b$.
 \Out
 Two integers, first the largest of them two, next the smallest.
+
+\subsection{TreE $\star\star\star$}
+\In
+An integer $h$, the height of the christmass tree.
+\Out
+A christmas tree with total height $h + 1$, $1$ being the trunk of said
+tree and $h$ all the result of it.
+\begin{verbatim}
+e
+a e
+e a e 
+a e a e
+e
+\end{verbatim}
 
 \subsection{Sigma for Sum $\star\star$}
 \In
@@ -81,49 +110,3 @@ Two integers, $a$ and $b$.
 Two integers, first the largest of them two, next the smallest.
 \Note
 You may  only use \s{min()} or \s{max()}, not both. You may not use branching.
-
-\section{Turtle or Tortoise?}
-Prerequisites: \s{turtle} module, the entire previous section.
-
-\subsection{Fair Square $\star$}
-\In
-An integer $A$ such that $10 \leq A \leq 100$.
-\Out
-Using \s{from turtle import Turtle}'s methods like 
-\s{forward} and \s{right} draw a square of length $A$.
-
-\subsection{Fair Ngon $\star\star$}
-\In
-Two integers, $A$ such that $10 \leq A \leq 100$ and $N$
-such that $2 \leq N \leq 20$.
-\Out
-Using \s{Turtle} draw a regular polygon (an $N$-gon) with $N$ sides and side
-length $A$. Ensure that the turtle finishes in the same position as it started
-in. The turtle shouldn't draw over itself at any point.
-\Hint
-Loops are your friend.
-
-\subsection{Trigonometry BFF $\star\star\star$}
-\In
-Two integers, $a$ and $b$.
-\Out
-Using \s{Turtle} draw a graph of the function $y = a * sin(\frac{\pi x}{10}) + b$.
-From $0$ to $20$ and a graph of the function $y = b$. Print the final position
-of the turtle.
-\Hint
-You can get $\sin$ and $\pi$ with \s{from math import pi, sin}, they are accurate
-enough for this purpose.
-
-\subsection{The Fair Ngon $\star\star\star\star\star$}
-\In
-Two integers, $A$ such that $10 \leq A \leq 100$ and $N$
-such that $2 \leq N \leq 20$.
-\Out
-Using \s{Turtle} draw a regular polygon (an $N$-gon) with $N$ sides and side
-length $A$. Ensure that the turtle finishes in the same position as it started
-in. You are only allowed to control the turtle with \s{penup}, \s{pendown},
-\s{goto}.
-\Hint
-Trigonometry might help.
-
-\end{document}
