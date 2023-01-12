@@ -1,4 +1,7 @@
 \documentclass{article}
+\usepackage{MnSymbol}
+\usepackage{multido}
+
 \pagestyle{empty}
 
 \newcommand{\s}[1]{\texttt{#1}}
@@ -7,6 +10,6 @@
 \newcommand{\Note}{\paragraph{Note:}}
 \newcommand{\Hint}{\paragraph{Hint:}}
 
-\newenvironment{task}[1]
-    {\subsection{#1!!!}\begin{minipage}{\linewidth}}
+\newenvironment{task}[2]
+    {\subsection{#1 \multido{\i=1+1}{#2}{$\smallstar$}}\begin{minipage}{\linewidth}}
     {\end{minipage}}
