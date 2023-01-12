@@ -1,0 +1,2 @@
+compile:
+	@pdflatex ./assignments.tex
