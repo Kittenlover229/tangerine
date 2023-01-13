@@ -78,8 +78,65 @@ explosion. For example when converting a string without text into an integer you
 
 ### Part 4: Loop de loop
 
-* Now let's move a little away from mathematics into something more specific.
+* Now let's move a little away from mathematics into something more specific. Imagine a sportsman going to the gym, when performing an exercise he repeats a set of actions (bending his bodyparts in specific ways) for a number of times and he does that untill exhausted. In programming we often achieve repeated action using something that is called a loop.
+* Have a look at this piece of code describing a single exercise:
+```py
+while not tired:
+    workout()
+```
+* It does exactly what was described before, while the sportsman is not tired we do something, workout in this case.
+* In python indentation matters.
+* Indentation is the shift of your code to the right made with tabs or spaces. To continue the example described above we may look at all actions done before
+starting and ending exercising.
 
+```py
+come_to_the_gym()
+change()
+while not tired:
+    workout()
+    rest()
+shower()
+change_back()
+go_home()
+```
+
+* The repeated part is called the body of a loop. The one that described the condition is called a header. 
+* But exercising until we are tired can be dangerous, perhaps we should do this action just enough times or until we are tired. Let's count the times we did a pushup and stop at 10 or if we are tired.
+
+```py
+pushup_count = 0
+while pushup_count < 10 or not tired:
+    do_a_pushup()
+    pushup_count += 1
+print(pushup_count)
+```
+
+* When executed this will print out 10 indicating that we indeed did 10 pushups, lovely.
+* This is not the only type of loops that exists, when programming we often need to work with arithemtic sequences, say we would want to print all numbers from 0 to 9. The while loop representation will look something like this.
+```py
+i = 0
+while i < 10:
+    print(i)
+```
+* Notice the 10, not a 9.
+
+* That's great and all but there is a simpler way to do it.
+```py
+for i in range(10):
+    print(i)
+```
+* This is functionally the same as the while loop above.
+* Nesting loops, example using biothlon.
+* Some more nesting loop examples
+```py
+x = 0
+while x > 0:
+    y = x
+    while y > 0:
+        y -= 1
+        print(y)
+    x -= 1 
+```
 
 # Misc
 
