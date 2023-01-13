@@ -1,3 +1,3 @@
 t = float(input())
 
-print(t * 1.8 + 3.5)
+print(t * 1.8 + 32)
