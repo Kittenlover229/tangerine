@@ -15,3 +15,5 @@ for i in range(N):
     y -= sidelen * sin(angle - d_angle) - sidelen * cos(angle - d_angle)
     angle -= d_angle
     turtle.goto(x, y)
+
+turtle.exitonclick()
