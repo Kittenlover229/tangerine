@@ -3,6 +3,10 @@
 An integer $4$.
 \Out
 The word \s{"Elephant"}.
+
+\begin{ExampleIO}
+\egio{4}{Elephant}
+\end{ExampleIO}
 \end{task}
 
 \begin{task}{Equation of a Line}{1}
@@ -19,6 +23,11 @@ Two integers $a$ and $b$.
 The product of $a$ and $b$.
 \Note
 You may not use the multiplication operation.
+
+\begin{ExampleIO}
+\egio{1\\0}{0}
+\egio{7\\8}{56}
+\end{ExampleIO}
 \end{task}
 
 \begin{task}{Late'o'clock}{2}
@@ -26,6 +35,13 @@ You may not use the multiplication operation.
 \Note Convert the given time $h$ to the 12-hour clock format.
 \Out First the time $h$ in 12-hour clock format, then \s{"am"} or \s{"pm"}
 depending on the time.
+
+\begin{ExampleIO}
+\egio{0}{12}
+\egio{8}{8am}
+\egio{13}{1pm}
+\end{ExampleIO}
+
 \end{task}
 
 \begin{task}{Quadratic Equations}{2}
@@ -36,6 +52,11 @@ Find all values of $x$, such that $ax^2 + bx + c=0$.
 \Note
 If there are no possible values of $x$ output \texttt{"NaN"} (not a number). 
 The values should not be repeated.
+
+\begin{ExampleIO}
+\egio{1\\-1\\-6}{-2\\3}
+\end{ExampleIO}
+
 \end{task}
 
 \begin{task}{Qubic Equation}{3}
@@ -55,6 +76,10 @@ use Cardano's formula.
 Two integers $a$ and $b$, sides of a right angled triangle.
 \Out
 The hypotenuse $c$ of the aforementioned triangle.
+
+\begin{ExampleIO}
+\egio{3\\4}{5}
+\end{ExampleIO}
 \end{task}
 
 \begin{task}{Euclid Disapproves}{2}
@@ -89,13 +114,13 @@ An integer $h$, the height of the christmass tree.
 \Out
 A christmas tree with total height $h + 1$, $1$ being the trunk of said
 tree and $h$ all the result of it.
-\begin{verbatim}
-e
-a a
-e e e 
-a a a a
-a
-\end{verbatim}
+\begin{ExampleIO}
+\egio{4}{e\\
+a a\\
+e e e \\
+a a a a\\
+a}
+\end{ExampleIO}
 \end{task}
 
 \begin{task}{Sigma for Sum}{2}

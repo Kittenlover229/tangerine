@@ -18,12 +18,46 @@
 \newcommand{\Note}{\paragraph{Note:}}
 \newcommand{\Hint}{\paragraph{Hint:}}
 
-\newenvironment{task}[2]
-    {\subsection[#1 *#2]{#1 
-        \multido{\i=1+1}{#2}{$\filledstar$}
-        \multido{\i=1+1}{\fpeval{5-#2}}{$\smallstar$}
+\newenvironment{task}[2] {
+        \vspace{1em}
+        \subsection*{#1 
+            \multido{\i=1+1}{#2}{$\filledstar$}
+            \multido{\i=1+1}{\fpeval{5-#2}}{$\smallstar$}
         }
-        \begin{minipage}{\linewidth}}
+        \begin{minipage}{\linewidth}
+        \addcontentsline{toc}{subsection}{\protect\numberline{}#2* #1}}
     {\end{minipage}}
 
 \AddToHook{cmd/section/before}{\clearpage}
+
+\newenvironment{ExampleIO}[0]{
+    \begin{tabular}{|p{6cm} | p{6cm}|}
+        \hline
+        \bf{In} & \bf{Out} \\
+}{\hline\end{tabular}}
+
+\newcommand{\egio}[2]{
+    \hline
+    \begin{minipage}[t]{\linewidth}
+        \texttt{\string#1}
+        \vspace{0.25em}
+    \end{minipage} &
+    \begin{minipage}[t]{\linewidth}
+        \texttt{\string#2}
+        \vspace{0.25em}
+    \end{minipage} \\
+}
+
+% example input output
+% \newcommand{\egio}[2]
+%     {
+%         \begin{tabular}{p{6cm} | p{6cm}}
+%         \bf{In} & \bf{Out} \\
+%         \hline
+%         \begin{minipage}[t]{\linewidth}
+%             #1
+%         \end{minipage} &
+%         \begin{minipage}[t]{\linewidth}
+%             #2
+%         \end{minipage} \\
+%     \end{tabular}}
