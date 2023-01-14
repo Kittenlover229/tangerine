@@ -7,6 +7,6 @@ sidelen = A * 5
 
 for i in range(N):
     turtle.forward(sidelen)
-    turtle.right(360/N)
+    turtle.right(360 / N)
 
 turtle.exitonclick()
