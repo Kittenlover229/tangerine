@@ -137,7 +137,3 @@ while x > 0:
         print(y)
     x -= 1 
 ```
-
-# Misc
-
-Where do I find documentation?
