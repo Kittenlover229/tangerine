@@ -8,17 +8,20 @@
 
 <!--Sequences-->
 * Lists
+* `zip` and `enumerate`
 * Sequence Minimum and Maximum
 * Sliding Window Technique
 * Slicing
+* `split`ing strings into lists
 
 <!--Function-->
 * Functions in their mathematical sense
 * Functions as units of execution
-* Mathematical Induction and Recursion
 * Loops and Recursion (Curry–Howard correspondence)
 * Recursive Maximum & Recursive Minimum
 * Functions & Lists, pass by value and pass by reference
+* Map
+* Big O Notation
 
 <!--Some Algorithms, Abstracting Them As Function-->
 * Linear Search
@@ -84,11 +87,11 @@ x = [1, 2, 3]
 print(x[1])
 ```
 
+* The simplest list is an empty one. You can also construct the list using the `list()` function.
+
 * And we are seing a 2. I wonder why that it.
 
-* It is like this for many reasons, mainly convinience and historic ones. Zero is absolutely a valid integer and ther is no need to disregard it when working with lists, but I prefer another point of view.
-
-* In the eldrich programming language C there were no lists, there was raw memory and you had something that was point to a "blob of integers" or "blob of floats". When you wanted to get a specific element you would count how many integers or floats respectively it was from the start. The first integer in a sequence was of course 0 integers or floats away from the start so its index was zero.
+* It is like this for many reasons, mainly convinience and historic ones. Zero is absolutely a valid integer and ther is no nnanguage C there were no lists, there was raw memory and you had something that was point to a "blob of integers" or "blob of floats". When you wanted to get a specific element you would count how many integers or floats respectively it was from the start. The first integer in a sequence was of course 0 integers or floats away from the start so its index was zero.
 
 ```
 My lovely integer storage:
@@ -108,7 +111,7 @@ v
 ls = [5, 6, 3, 5, 3, 3]
 
 for i in range(len(ls)):
-    print[i]
+    print(ls[i])
 ```
 
 * Now ranges starting at 0 probably makes even more sense. We are also using the `len` function to get the length of our lit. Can someone guess what it is in this example? No surprises there.
@@ -117,10 +120,28 @@ for i in range(len(ls)):
 
 * What is an iterable? It's just something you can iterate through, meaning you can use a `for` loop just fine. 
 
-* Usually these objects are also homgeneous. A list is homogeneous if it consists of elements of the same types (notice the plural, we will talk about that later). A list all elements of each are 
+* Usually these objects are also homogeneous. A list is homogeneous if it consists of elements of the same types (notice the plural, we will talk about that later). A list all elements of each are 
 
-* We are, in fact, already familiar with one other homogeneous iterable object. That's the range. Let's go through it.
+* We are, in fact, already familiar with one other homogeneous iterable object. That's the range. Let's verify that it is indeed an iterable homogenenous object.
 
-## Misc
+* Lists are also mutable, that means you can change. Common operations include `append` for adding a single element to the list, `pop` for removing an element at a certain index (and retrieving it),`clear` for removing all the elements of a list, `extend` for attaching a list as a tail of some other list. `remove` for removing
 
-* Lists can be heterogenous: elements of a list can be of different types and this is suboptimal
+* You may also freely nest lists as far as you want.
+
+```py
+one_deep_list = [1, 2, 3, 4, 5, 6]
+two_deep_list = [[1, 2], [3, 4], [5, 6]]
+three_deep_list = [[[1], [2]], [[3], [4]], [[5], [6]]]
+```
+
+* As you might have already noticed indexing a specific element of the list looks very similar to creating a list. That might lead to notation abuse like this.
+
+```py
+[[[[0][0]][0]][0]]
+```
+
+* Specific list elements can also be assigne to. All of this combined makes for a great tool for processing large chunks of data with the same algorithm. From our previous lecture we might recall our maximum algorithm, let us try and implement the opposite of that, a minimum algorithm that operates on a list. 
+
+```py
+
+```

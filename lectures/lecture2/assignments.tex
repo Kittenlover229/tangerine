@@ -89,8 +89,10 @@ The air is stale, open the \textit{window} please.
 Sappho has grown tired of poetry. She pleaded for Apollo to help her choose
 the best so far. Being a busy god he refuses, yet he lets one of his nymphs
 help the poor poet. Sappho layed out all of her poetry in a line and graded each
-work with a mark $I < n \leq DCCC$. She didn't like some of her writings, so she
-put a negative sign before those. 
+work with a mark $I \leq n \leq DCCC$. She didn't like some of her writings, so she
+put a negative sign before those. After that she noticed that no two poems were
+of equal ranking, they all recieved different grades, no two grades of different
+poems were the same.
 Nymph is a very joyful and not a very intellegint creature, she can only compare
 two poems adjecent to eachother. They are also
 inattentive enough to ignore Sappho explaination of the negative sign.
@@ -101,7 +103,8 @@ until there is only one poem left.
 
 \In
 An integer $1 < p < 100$, the amount of poems. 
-Then, a sequence of space-separated integers $-800 \leq n \leq 800, n \nin \{-1, 0, 1\}$.
+Then, a sequence $N$ of space-separated integers $-800 \leq n \leq 800$, 
+$n \nin \{-1, 0, 1\}$, $\forall a, b \in N : a \neq b$.
 \Out
 $p$ lines of space-separated integers representing all the sequence the nymph shouted out.
 \Hint there is \s{abs(x)}, it is equivalent to $|x|$.
@@ -109,5 +112,4 @@ $p$ lines of space-separated integers representing all the sequence the nymph sh
 \begin{ExampleIO}
 \egio{5\\-2 1 14 -17 5}{-2 1 14 -17 5\\-2 14 -17 5\\14 -17 -17\\-17 -17\\-17}
 \end{ExampleIO}
-
 \end{task}
