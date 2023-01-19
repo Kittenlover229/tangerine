@@ -72,7 +72,7 @@ You may use \href{https://oeis.org/}{this website} to check how correct your res
 \end{ExampleIO}
 \end{task}
 
-\begin{task}{Blaise's Blessing}{2}
+\begin{task}{Blaise's Blessing}{3}
 \In
 An integer $N$, $N > 0$.
 \Out
@@ -85,14 +85,29 @@ The air is stale, open the \textit{window} please.
 \end{ExampleIO}
 \end{task}
 
-\begin{task}{Maximum Subsequence Sum}{2}
+\begin{task}{Poetic Crisis In Archaic Greece}{4}
+Sappho has grown tired of poetry. She pleaded for Apollo to help her choose
+the best so far. Being a busy god he refuses, yet he lets one of his nymphs
+help the poor poet. Sappho layed out all of her poetry in a line and graded each
+work with a mark $I < n \leq DCCC$. She didn't like some of her writings, so she
+put a negative sign before those. 
+Nymph is a very joyful and not a very intellegint creature, she can only compare
+two poems adjecent to eachother. They are also
+inattentive enough to ignore Sappho explaination of the negative sign.
+
+The nymph has started her work. She compares two works and loudly shouts
+out the grade of the best poem and then moves on to the next pair. That continues
+until there is only one poem left.
+
 \In
-An integer $l$, $1 < l < 2^10$.
+An integer $1 < p < 100$, the amount of poems. 
+Then, a sequence of space-separated integers $-800 \leq n \leq 800, n \nin \{-1, 0, 1\}$.
 \Out
-\Hint
+$p$ lines of space-separated integers representing all the sequence the nymph shouted out.
+\Hint there is \s{abs(x)}, it is equivalent to $|x|$.
 
 \begin{ExampleIO}
-\egio{4}{1\\1 1\\1 2 1\\1 3 3 1\\1 4 6 4 1}
+\egio{5\\-2 1 14 -17 5}{-2 1 14 -17 5\\-2 14 -17 5\\14 -17 -17\\-17 -17\\-17}
 \end{ExampleIO}
+
 \end{task}
-    
