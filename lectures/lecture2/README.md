@@ -10,18 +10,6 @@
 * Lists
 * `zip` and `enumerate`
 * Sequence Minimum and Maximum
-* Sliding Window Technique
-* Slicing
-* `split`ing strings into lists
-
-<!--Function-->
-* Functions in their mathematical sense
-* Functions as units of execution
-* Loops and Recursion (Curry–Howard correspondence)
-* Recursive Maximum & Recursive Minimum
-* Functions & Lists, pass by value and pass by reference
-* Map
-* Big O Notation
 
 <!--Some Algorithms, Abstracting Them As Function-->
 * Linear Search
@@ -31,6 +19,13 @@
 <!--Drawing-->
 * Simple Drawings With Turtle
 * Koch Snowflake
+
+<!--Addendum-->
+* Two techniques for 2D lists: lists of lists and linearization
+* Sliding Window Technique
+* Slicing
+* `split`ing strings into lists
+* Comparing strings (Lexocographically)
 
 ## Contents
 
@@ -140,8 +135,38 @@ three_deep_list = [[[1], [2]], [[3], [4]], [[5], [6]]]
 [[[[0][0]][0]][0]]
 ```
 
-* Specific list elements can also be assigne to. All of this combined makes for a great tool for processing large chunks of data with the same algorithm. From our previous lecture we might recall our maximum algorithm, let us try and implement the opposite of that, a minimum algorithm that operates on a list. 
+* Specific list elements can also be assigned to. All of this combined makes for a great tool for processing large chunks of data with the same algorithm. From our previous lecture we might recall our maximum algorithm, let us try and implement the opposite of that, a minimum algorithm that operates on a list. 
 
 ```py
+lovely_lovely_list = [3, 488, 5, 6]
 
+max_item_so_far = None
+for list_item in lovely_lovely_list:
+    if max_item_so_far > list_item:
+        max_item_so_far = list_item
+
+print(max_item_so_far)
 ```
+
+* There is a new keyword "None", but it just means that there is no value was found just yet. This is a concious choice.
+
+* Spend some time exploring the algorithm. Verify that it works.
+
+* Now, let's change our task a bit, find the maximum element of a list and spit out it's index. For that purpose there is a helper function `enumerate`. It
+goes through of all the elements of a list with their indices.
+
+```py
+lovely_lovely_list = [3, 488, 5, 6]
+
+max_item_so_far = None
+max_index_so_far = None
+for index, item in enumerate(lovely_lovely_list):
+    if max_item_so_far > item:
+        max_item_so_far = item
+        max_index_so_far = index
+
+print(max_index_so_far)
+```
+* Great! Verify that it works. We can use that example to revise some terminology. An index is whatever the value some object is inside the list, indices start from zero. An object inside the list is called an element. Getting an element from a list is called indexing. 
+
+* Now, another common thing is finding an object to satisfy a certain criterion and that we did. More common is filtering, so let's have a look an example.
