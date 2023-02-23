@@ -1,115 +1,231 @@
+\Note Use \s{inputs = list(map(int, input().split()))} to parse the list of numbers into a variable,
+no need to know it works for now, just assume it's magic. This transforms an
+input of \s{1 2 3 4 5 6} into \s{[1, 2, 3, 4, 5, 6]}.
+
+
 \begin{task}{Fair Square}{1}
-\In
-An integer $A$ such that $10 \leq A \leq 100$.
-\Out
-Using \s{from turtle import Turtle}'s methods like 
-\s{forward} and \s{right} draw a square of length $A$.
+    \In
+    An integer $A$ such that $10 \leq A \leq 100$.
+    \Out
+    Using \s{from turtle import Turtle}'s methods like 
+    \s{forward} and \s{right} draw a square of length $A$.
 \end{task}
 
 \begin{task}{Fair Ngon}{2}
-\In
-Two integers, $A$ such that $10 \leq A \leq 100$ and $N$
-such that $2 \leq N \leq 20$.
-\Out
-Using \s{Turtle} draw a regular polygon (an $N$-gon) with $N$ sides and side
-length $5A$. Ensure that the turtle finishes in the same position as it started
-in. The turtle shouldn't draw over itself at any point.
-\Hint
-Loops are your friend.
+    \In
+    Two integers, $A$ such that $10 \leq A \leq 100$ and $N$
+    such that $2 \leq N \leq 20$.
+    \Out
+    Using \s{Turtle} draw a regular polygon (an $N$-gon) with $N$ sides and side
+    length $5A$. Ensure that the turtle finishes in the same position as it started
+    in. The turtle shouldn't draw over itself at any point.
+    \Hint
+    Loops are your friend.
 \end{task}
 
 \begin{task}{Trigonometry BFF}{3}
-\In
-Two integers, $a$ and $b$.
-\Out
-Using \s{Turtle} draw a graph of the function $y = a * sin(\frac{\pi x}{10}) + b$.
-From $0$ to $200$ and a graph of the function $y = b$. Print the final position
-of the turtle.
-\Hint
-You can get $\sin$ and $\pi$ with \s{from math import pi, sin}, they are accurate
-enough for this purpose.
+    \In
+    Two integers, $a$ and $b$.
+    \Out
+    Using \s{Turtle} draw a graph of the function $y = a * sin(\frac{\pi x}{10}) + b$.
+    From $0$ to $200$ and a graph of the function $y = b$. Print the final position
+    of the turtle.
+    \Hint
+    You can get $\sin$ and $\pi$ with \s{from math import pi, sin}, they are accurate
+    enough for this purpose.
 \end{task}
 
 \begin{task}{The Fair Ngon}{5}
-\In
-Two integers, $A$ such that $10 \leq A \leq 100$ and $N$
-such that $2 \leq N \leq 20$.
-\Out
-Using \s{Turtle} draw a regular polygon (an $N$-gon) with $N$ sides and side
-length $10A$. Ensure that the turtle finishes in the same position as it started
-in. You are only allowed to control the turtle with \s{goto}.
-\Hint
-Trigonometry might help.
+    \In
+    Two integers, $A$ such that $10 \leq A \leq 100$ and $N$
+    such that $2 \leq N \leq 20$.
+    \Out
+    Using \s{Turtle} draw a regular polygon (an $N$-gon) with $N$ sides and side
+    length $10A$. Ensure that the turtle finishes in the same position as it started
+    in. You are only allowed to control the turtle with \s{goto}.
+    \Hint
+    Trigonometry might help.
 \end{task}
 
 \begin{task}{Tick Space Tick Space Tick}{2}
-\In
-Two integers, $10 \leq L \leq 100$ and $1 \leq N \leq 15$.
-\Out
-Draw a horizontal dotted line of $N$ segments. 
-The length of each segment should be $L$.
-The space between two segments should also be $L$.
-\Note
-The turtle should start and end the drawing with a filled segment.
-\Hint
-Make use of \s{turtle.penup}, \s{turle.penup} and \s{turtle.isdown}.
+    \In
+    Two integers, $10 \leq L \leq 100$ and $1 \leq N \leq 15$.
+    \Out
+    Draw a horizontal dotted line of $N$ segments. 
+    The length of each segment should be $L$.
+    The space between two segments should also be $L$.
+    \Note
+    The turtle should start and end the drawing with a filled segment.
+    \Hint
+    Make use of \s{turtle.penup}, \s{turle.penup} and \s{turtle.isdown}.
 \end{task}
 
 \begin{task}{Fib}{2}
-\In
-An integer $n$, $n > 1$.
-\Out
-All terms from 0th to $n$th (inclusive) of the Fibonacci sequence.
-The Fibonacci sequence is defined as follows.
-$$F_0 = 0$$
-$$F_1 = 1$$
-$$F_n = F_{n - 1} + F_{n - 2}$$
-\Note
-You can solve this with both loops and recursion, maybe try it both ways?
-You may use \href{https://oeis.org/}{this website} to check how correct your result is.
-\begin{ExampleIO}
-\egio{14}{0\\1\\1\\2\\3\\5\\8\\13\\21\\34\\55\\89\\144\\233\\377\\}
-\end{ExampleIO}
+    \In
+    An integer $n$, $n > 1$.
+    \Out
+    All terms from 0th to $n$th (inclusive) of the Fibonacci sequence.
+    The Fibonacci sequence is defined as follows.
+    $$F_0 = 0$$
+    $$F_1 = 1$$
+    $$F_n = F_{n - 1} + F_{n - 2}$$
+    \Note
+    You can solve this with both loops and recursion, maybe try it both ways?
+    You may use \href{https://oeis.org/}{this website} to check how correct your result is.
+    \begin{ExampleIO}
+    \egio{14}{0\\1\\1\\2\\3\\5\\8\\13\\21\\34\\55\\89\\144\\233\\377\\}
+    \end{ExampleIO}
+    \end{task}
+
+    \begin{task}{Blaise's Blessing}{3}
+    \In
+    An integer $N$, $N > 0$.
+    \Out
+    $N$ rows of the pascal triangle.
+    \Hint
+    The air is stale, open the \textit{window} please.
+
+    \begin{ExampleIO}
+    \egio{4}{1\\1 1\\1 2 1\\1 3 3 1\\1 4 6 4 1}
+    \end{ExampleIO}
 \end{task}
 
-\begin{task}{Blaise's Blessing}{3}
-\In
-An integer $N$, $N > 0$.
-\Out
-$N$ rows of the pascal triangle.
-\Hint
-The air is stale, open the \textit{window} please.
 
-\begin{ExampleIO}
-\egio{4}{1\\1 1\\1 2 1\\1 3 3 1\\1 4 6 4 1}
-\end{ExampleIO}
+\begin{task}{Average}{1}
+    \In
+    A list of space-separated numbers $a_i$ of length $n \geq 1$. 
+    \Out
+    An average of all numbers, $\frac{a_1 + a_2 + \dots + a_n}{n}$.
+
+    \begin{ExampleIO}
+    \egio{1 2 3 4 5 6}{3.5}
+    \egio{0}{0}
+    \egio{1 -1}{0}
+    \end{ExampleIO}
 \end{task}
 
-\begin{task}{Poetic Crisis In Archaic Greece}{4}
-Sappho has grown tired of poetry. She pleaded for Apollo to help her choose
-the best so far. Being a busy god he refuses, yet he lets one of his nymphs
-help the poor poet. Sappho layed out all of her poetry in a line and graded each
-work with a mark $I \leq n \leq DCCC$. She didn't like some of her writings, so she
-put a negative sign before those. After that she noticed that no two poems were
-of equal ranking, they all recieved different grades, no two grades of different
-poems were the same.
-Nymph is a very joyful and not a very intellegint creature, she can only compare
-two poems adjecent to eachother. They are also
-inattentive enough to ignore Sappho explaination of the negative sign.
 
-The nymph has started her work. She compares two works and loudly shouts
-out the grade of the best poem and then moves on to the next pair. That continues
-until there is only one poem left.
-
-\In
-An integer $1 < p < 100$, the amount of poems. 
-Then, a sequence $N$ of space-separated integers $-800 \leq n \leq 800$, 
-$n \neq 0$, $\forall a, b \in N : a \neq b$.
-\Out
-$p$ lines of space-separated integers representing all the sequence the nymph shouted out.
-\Hint there is \s{abs(x)}, it is equivalent to $|x|$.
-
-\begin{ExampleIO}
-\egio{5\\-2 1 14 -17 5}{-2 1 14 -17 5\\-2 14 -17 5\\14 -17 -17\\-17 -17\\-17}
-\end{ExampleIO}
+\begin{task}{Furthest Apart}{2}
+    \In
+    A list of space-separated numbers $a_i$ of length $n \geq 2$. 
+    \Out
+    The largest distance between two numbers.
+    \Note 
+    Say in the 1st example the most spread-apart numbers are 1 and 5, and the
+    distance between them is 4, the answer. In the second all the numbers are the
+    same, the distance between any number and itself is 0.
+    \begin{ExampleIO}
+    \egio{1 2 3 4 5}{4}
+    \egio{3 3 3 3 3}{0}
+    \end{ExampleIO}
 \end{task}
+
+
+\begin{task}{\reflectbox{Reversed}}{2}
+    \In
+    A list of space-separated numbers $a_i$ of length $n \geq 0$.
+    \Out
+    The same list in reverse order.
+    \Note 
+    Try and reverse the list in-place, without creating a new one to copy the elements into.
+    
+    \begin{ExampleIO}
+    \egio{1 4 9}{9 4 1}
+    \egio{1}{1}
+    \end{ExampleIO}
+\end{task}
+
+\begin{task}{ROT K}{3}
+    \In
+    First line is an integer $-2n \leq K \leq 2n$.
+    The next line is a list of space-separated numbers $a_i$ of length $n \geq 0$.
+    \Out
+    The same list with all of its elements shifted by $K$, to the right if $K$ is 
+    positive and to the left if negative. When $K = 0$ the list should stay intact.
+    \Note 
+    Try and do this in-place, without creating a copy of a list!
+    
+    \begin{ExampleIO}
+    \egio{2\\1 2 3 4 5}{4 5 1 2 3}
+    \egio{-1\\1 2 3 4 5}{2 3 4 5 1}
+    \egio{-6\\1 2 3 4 5}{2 3 4 5 1}
+    \egio{0\\1 2 3 4 5}{1 2 3 4 5}
+    \end{ExampleIO}
+\end{task}
+
+\begin{task}{Shufflepuff}{1}
+    \In
+    A list of space-separated numbers $a_i$ of length $n \geq 1$.
+    \Out
+    The same list shuffled in any way you want. The output list must not be 
+    identical to the input list. The shuffle of the same list must be the
+    same across program runs (i.e. when given a list the output
+    will always be the same, no matter the time of day, weather or else).
+    
+    \begin{ExampleIO}
+    \egio{1 2 3 4 5}{3 4 5 2 1}
+    \end{ExampleIO}
+\end{task}
+
+\begin{task}{Just Like In The Code!}{3}
+    \In
+    A list of space-separated words not containing any special symbols 
+    (i.e. \href{https://en.wikipedia.org/wiki/Newline}{newline}s, 
+    \href{https://en.wikipedia.org/wiki/Carriage_return}{carriage return}s, 
+    \href{https://en.wikipedia.org/wiki/Bell_character}{bell}s), single or
+    double quotes.
+    \Out
+    A list, formatted like it is written in python. See the examples below.
+    
+    \begin{ExampleIO}
+    \egio{hi, oh dear world of sunshine}{["hi,", "oh", "dear", "world", "of", "sunshine"]}
+    \end{ExampleIO}
+\end{task}
+
+\begin{task}{No-duplicated Merge}{4}
+    \In
+    Two lists of lenghts $n \geq 0$ and $m \geq 0$.
+    \Out
+    A list, consisting of all the elements from each list taken one by one
+    without repeating duplicates. Follow the examples.
+
+    \begin{ExampleIO}
+    \egio{1 3 5 7\\2 4 6 8}{1 2 3 4 5 6 7 8}
+    \egio{1 2 3\\1 2 3}{1 2 3}
+    \egio{7 21 33 -4 60\\ 21 -4 57}{7 21 33 -4 60 57}
+    \end{ExampleIO}
+\end{task}
+
+\begin{task}{Strong Neighbour}{3}
+    \In
+    A list of space-separated numbers $a_i$ of length $n \geq 1$.
+    \Out
+    A list of maximum elements from each \textbf{adjecent triplet} of numbers.
+
+    \begin{ExampleIO}
+    \egio{8 1 9 3 5 1 0 -8}{9 9 9 5 5 1}
+    \end{ExampleIO}
+\end{task}
+
+\begin{task}{Transpose}{2}
+    \In
+    A square matrix of numbers of size $n \times n$.
+    \Out
+    A transpose of that matrix. The same matrix flipped across its main diagonal.
+
+    \begin{ExampleIO}
+    \egio{1 4 7\\2 5 8\\3 6 9}{1 2 3\\4 5 6\\7 8 9}
+    \end{ExampleIO}
+\end{task}
+
+\begin{task}{Slice up}{2}
+    \In
+    First line is an integer $S$, the second line is a list $L$ of numbers containing $S$.
+    \Out
+    Two parts of the list, before and after $S$, both not including $S$.
+    \begin{ExampleIO}
+    \egio{0\\3 6 9 0 2 4 8}{3 6 9\\2 4 8}
+    \egio{0\\0 88 77 66}{ \\88 77 66}
+    \end{ExampleIO}
+\end{task}
+
