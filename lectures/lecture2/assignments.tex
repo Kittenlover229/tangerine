@@ -75,18 +75,16 @@ input of \s{1 2 3 4 5 6} into \s{[1, 2, 3, 4, 5, 6]}.
     \begin{ExampleIO}
     \egio{14}{0\\1\\1\\2\\3\\5\\8\\13\\21\\34\\55\\89\\144\\233\\377\\}
     \end{ExampleIO}
-    \end{task}
+\end{task}
 
-    \begin{task}{Blaise's Blessing}{3}
+\begin{task}{Blaise's Blessing}{5}
     \In
     An integer $N$, $N > 0$.
     \Out
     $N$ rows of the pascal triangle.
-    \Hint
-    The air is stale, open the \textit{window} please.
 
     \begin{ExampleIO}
-    \egio{4}{1\\1 1\\1 2 1\\1 3 3 1\\1 4 6 4 1}
+    \egio{5}{1\\1 1\\1 2 1\\1 3 3 1\\1 4 6 4 1}
     \end{ExampleIO}
 \end{task}
 
@@ -157,13 +155,12 @@ input of \s{1 2 3 4 5 6} into \s{[1, 2, 3, 4, 5, 6]}.
     \In
     A list of space-separated numbers $a_i$ of length $n \geq 1$.
     \Out
-    The same list shuffled in any way you want. The output list must not be 
-    identical to the input list. The shuffle of the same list must be the
+    The same list shuffled in any way you want. The shuffle of the same list must be the
     same across program runs (i.e. when given a list the output
     will always be the same, no matter the time of day, weather or else).
     
     \begin{ExampleIO}
-    \egio{1 2 3 4 5}{3 4 5 2 1}
+    \egio{1 2 3 4 5}{3 4 5 1 2}
     \end{ExampleIO}
 \end{task}
 
@@ -182,23 +179,9 @@ input of \s{1 2 3 4 5 6} into \s{[1, 2, 3, 4, 5, 6]}.
     \end{ExampleIO}
 \end{task}
 
-\begin{task}{No-duplicated Merge}{4}
+\begin{task}{Strong Neighbour}{2}
     \In
-    Two lists of lenghts $n \geq 0$ and $m \geq 0$.
-    \Out
-    A list, consisting of all the elements from each list taken one by one
-    without repeating duplicates. Follow the examples.
-
-    \begin{ExampleIO}
-    \egio{1 3 5 7\\2 4 6 8}{1 2 3 4 5 6 7 8}
-    \egio{1 2 3\\1 2 3}{1 2 3}
-    \egio{7 21 33 -4 60\\ 21 -4 57}{7 21 33 -4 60 57}
-    \end{ExampleIO}
-\end{task}
-
-\begin{task}{Strong Neighbour}{3}
-    \In
-    A list of space-separated numbers $a_i$ of length $n \geq 1$.
+    A list of space-separated numbers $a_i$ of length $n \geq 2$.
     \Out
     A list of maximum elements from each \textbf{adjecent triplet} of numbers.
 
@@ -207,7 +190,7 @@ input of \s{1 2 3 4 5 6} into \s{[1, 2, 3, 4, 5, 6]}.
     \end{ExampleIO}
 \end{task}
 
-\begin{task}{Transpose}{2}
+\begin{task}{Transpose}{3}
     \In
     A square matrix of numbers of size $n \times n$.
     \Out
