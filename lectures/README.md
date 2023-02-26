@@ -12,8 +12,10 @@
         * False, truth and statements
         * And, Or and Not: The three main building blocks
         * Theorems: Double negation & De Morgan's Laws
+        * Representing this as logic gates (play around [here](https://logic.ly/demo/))
         * Combined operations: XOR, Equivalence, Implication
-        * NAND: Everything is NANDS 
+        * The relationship between if and implication
+        * NAND: Everything is NANDS (learn more [here](https://en.wikipedia.org/wiki/NAND_logic))
         * Truthly and falsely values
     * Number Bases
         * Unary, the tally mark system
