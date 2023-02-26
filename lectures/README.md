@@ -4,7 +4,7 @@
     * Integer division and modulo operator
     * Negative modulo and it's properties
 
-3. Logic and Numbers
+3. Logic, Numbers and Data Encoding
     * Misc
         * Transforming cascading conditionals into lines with `elif`
     * Formal Logic and Number Bases
@@ -14,7 +14,7 @@
         * Theorems: Double negation & De Morgan's Laws
         * Combined operations: XOR, Equivalence, Implication
         * NAND: Everything is NANDS 
-        * Truthly and falsely values 
+        * Truthly and falsely values
     * Number Bases
         * Unary, the tally mark system
         * Non-positional tally marks starting at 5
@@ -26,6 +26,12 @@
         * Phi, pi and other crazy bases
         * Non-positional-positional counting system of time HH:MM:SS
         * SELFSTUDY TOPIC: negabinary
+    * Usecases
+        * Encoding 32bit integers
+        * Two's complement
+        * High-level overview of encoding floats
+        * Fixed-length and Varied-length encodings using characters
+        * Morse as ternary and binary.
 4. F for Function
     * Functions:
         * Functions
