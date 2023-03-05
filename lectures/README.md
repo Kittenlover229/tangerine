@@ -35,29 +35,32 @@
         * Fixed-length and Varied-length encodings using characters
         * Morse as ternary and binary.
 4. F for Function
-    * Functions:
-        * Functions
-        * Named parameterss
-        * Named-only parameters
-        * Positional-only parameters
-        * Return value 
-        * Call stack
-        * Recurring functions
-        * Curry-Howard correspondence
-        * Hanoi Towers
+    * Functions as Computations
+    * Named parameterss
+    * Named-only parameters
+    * Positional-only parameters
+    * Return value 
+    * Call stack
+    * Recurring functions
+    * Curry-Howard correspondence
+    * `map`, `filter`, `reduce`, `reverse`, `reversed`
+    * λ-functions
+    * The [`.operator`](https://docs.python.org/3/library/operator.html) module
+
+5. Sorting Sorting Sorting
     * Sorts:
         * Bubble sort
         * Selection sort
         * Quicksort
         * `sort` and `sorted`
         * Idempotence
+        * Hanoi Towers
     * Misc:
         * Lazy or (`1 or print("Hello")` and `0 or print("Hello")`)
         * Syntax tree
         * Ternary operator
         * Pass by-value and by-reference
-        * `map`, `filter`, `reduce`, `reverse`, `reversed`
-        * λ-functions
+
 
 5. Heavier Algorithms
     * Misc:
