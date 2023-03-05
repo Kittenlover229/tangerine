@@ -1,3 +1,4 @@
 # Labs
 
-These labs are some projects that are intended for practise and applying mre skills than solving individual problems.
+These labs are some projects that are intended for practise and applying many skills
+at a time.

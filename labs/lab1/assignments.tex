@@ -1,0 +1,24 @@
+\begin{lab}{Hangman}
+    This lab work is focused on implementing a digital variant of a classical 
+    paper-and-pencil game \href{https://en.wikipedia.org/wiki/Hangman_(game)}{"Hangman"}.
+    Create a small game that formulates a word and accepts user input.
+    If the player input is a single letter the program should reveal all the copies of
+    that letter in the word. If the word is entirely revealed the player gets one win.
+    Every player is assigned a certain number of attempts per formulated words.
+    If the letter is not in the word, a single attempt is taken away. If there are 
+    no more attempts left the player gets a loss. At the end of each round
+    (independent of the win/loss result) the user is shown
+
+    \begin{labext}{Quiet Quitting}
+        When encountering a keybord interrupt the app should silently close.
+    \end{labext}
+    \begin{labext}{Save Files}
+        Wins and losses can be tracked across program instances in a file. 
+        When starting without a save file such should be created and updated
+        upon every win and loss.
+    \end{labext}
+    \begin{labext}{Dictionary}
+        The words to use should be picked from a dictionary file which can be
+        specified by the user as the program's first command line argument.
+    \end{labext}
+\end{lab}
