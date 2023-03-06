@@ -20,12 +20,12 @@
 
 \newenvironment{task}[2] {
         \vspace{1em}
-        \subsection*{#1 
+        \subsubsection*{#1 
             \multido{\i=1+1}{#2}{$\filledstar$}
             \multido{\i=1+1}{\fpeval{5-#2}}{$\smallstar$}
         }
         \begin{minipage}{\linewidth}
-        \addcontentsline{toc}{subsection}{\protect\numberline{}#2* #1}}
+        \addcontentsline{toc}{subsubsection}{#2* #1}}
     {\end{minipage}}
 
 \AddToHook{cmd/section/before}{\clearpage}
@@ -48,8 +48,9 @@
     \end{minipage} \\
 }
 
-
 % LABS:
 
 \newenvironment{lab}[1]{\subsection{#1}}{}
 \newenvironment{labext}[1]{\subsubsection*{\textit{Ext.} #1}}{}
+
+\setcounter{secnumdepth}{0}
