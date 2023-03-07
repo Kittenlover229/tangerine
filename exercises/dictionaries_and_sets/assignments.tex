@@ -1,0 +1,32 @@
+\begin{task}{Character Counter}{2}
+    \In
+    A string of characters from `a' to `z'.
+    \Out
+    How many times each character occurs. The ordering does not matter.
+
+    \begin{ExampleIO}
+    \egio{aabbcccadbb}{a 3\\b 4\\c 3\\d 4}
+    \end{ExampleIO}
+\end{task}
+
+\begin{task}{Factory Scheduling}{5}
+    On a factory a work station is used on a schedule. The work station
+    can perform any amount of tasks at a time. It is considered occupied
+    when there is at least one task being done.
+ 
+    \In
+    First line contains the duration of the work day $T$ and the amount of tasks $N$
+    to perform on the work station. Next $N$ lines are the start $s$ and the end $e$
+    of each task.
+    \Out
+    Total time the work station is unoccupied (has no tasks) and the duration of
+    it's longest time unoccupied. \\
+
+    \begin{ExampleIO}
+    \egio{1000 4\\
+    600 750\\
+    350 450\\
+    0 350\\
+    950 1000}{350 200}
+    \end{ExampleIO}
+\end{task}
