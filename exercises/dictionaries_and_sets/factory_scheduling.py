@@ -11,7 +11,7 @@ time_moments = defaultdict(lambda: 0)
 for s, e in tasks:
     time_moments[s] += 1
     time_moments[e] -= 1
-    
+
 time_moments = list(time_moments.items())
 time_moments.sort()
 
