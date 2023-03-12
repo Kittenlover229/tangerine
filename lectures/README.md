@@ -34,6 +34,7 @@
         * High-level overview of encoding floats
         * Fixed-length and Varied-length encodings using characters
         * Morse as ternary and binary.
+
 4. F for Function
     * Functions as Computations
     * Named parameterss
@@ -44,6 +45,7 @@
     * Recurring functions
     * Curry-Howard correspondence
     * `map`, `filter`, `reduce`, `reverse`, `reversed`
+    * Pure Functions & Functions With Non-impactful Side Effects & Impure Functions
     * λ-functions
     * The [`.operator`](https://docs.python.org/3/library/operator.html) module
 
